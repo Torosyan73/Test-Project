@@ -1,0 +1,56 @@
+.toggle-checkbox {
+    cursor: pointer;
+
+    .toggle-checkbox__real {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        appearance: none;
+
+        &:checked ~ .toggle-checkbox__title {
+            font-weight: 500;
+        }
+
+        &:checked + .toggle-checkbox__fake {
+            background-color: #FFE074;
+        }
+
+        &:checked + .toggle-checkbox__fake::before {
+            left: 19px;
+        }
+    }
+
+    .toggle-checkbox__fake {
+        position: relative;
+        display: inline-block;
+        margin-right: 10px;
+        width: 37px;
+        height: 20px;
+        background-color: #C4C4C4;
+        border-radius: 10px;
+        vertical-align: bottom;
+    }
+
+    .toggle-checkbox__fake::before {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        content: "";
+        width: 16px;
+        height: 16px;
+        background-color: #3C3C3C;
+        border-radius: 50%;
+        transition: all 0.2s ease-in;
+    }
+
+    .toggle-checkbox__title {
+        font-weight: 400;
+        font-size: 16px;
+        color: #3C3C3C;
+    }
+}
+
+
+
+

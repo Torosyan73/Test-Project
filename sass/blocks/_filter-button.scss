@@ -1,0 +1,52 @@
+.filter-button {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    .form-btn {
+        height: 50px;
+        background-color: transparent;
+        border: 1px solid #D6D6D6;
+        border-radius: 4px;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 50px;
+        color: #3C3C3C;
+        cursor: pointer;
+        transition: all 0.2s ease-in;
+
+        &:hover {
+            background-color: #E5E5E5;
+        }
+    }
+
+    .form-btn--submit {
+        background-color: #FFCF26;
+        color: #000;
+        border: none;
+
+        &:hover {
+            background-color: #d3a80d;
+        }
+    }
+
+    .form-btn--reset {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        &::before {
+            margin-right: 10px;
+            display: inline-block;
+            content: "";
+            width: 24px;
+            height: 24px;
+            background-image: url("./../img/icon/x.svg");
+            background-repeat: no-repeat;
+            background-size: initial;
+        }
+    }
+}
+

@@ -1,0 +1,61 @@
+.term {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.radio {
+    cursor: pointer;
+
+    .radio__real {
+        position: absolute;
+        width: 0;
+        height: 0;
+        opacity: 0;
+        appearance: none;
+
+        &:checked + .radio__fake {
+            background-color: #FFE074;
+        }
+
+        &:checked ~ .radio__title {
+            font-weight: 500;
+        }
+
+        &:checked + .radio__fake::before {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            content: "";
+            width: 7px;
+            height: 7px;
+            background-color: #3C3C3C;
+            border-radius: 50%;
+        }
+    }
+
+    .radio__fake {
+        position: relative;
+        display: inline-block;
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        border: 1px solid #777777;
+        border-radius: 50%;
+        vertical-align: bottom; 
+        transition: all 0.2s ease-in;
+    }
+
+    .radio__title {
+        font-family: 'Roboto';
+        font-weight: 400;
+        font-size: 16px;
+        color: #3C3C3C;
+    }
+}
+
+
+
+

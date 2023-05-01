@@ -1,0 +1,36 @@
+.widget {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.widget__title {
+    position: relative;
+    font-weight: 700;
+    font-size: 18px;
+    color: #000000;
+    cursor: pointer;
+
+    &::before {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        content: "";
+        width: 24px;
+        height: 24px;
+        background-image: url(./../img/icon/chevron-up.svg);
+        background-repeat: no-repeat;
+        background-size: initial;
+        background-position: center;
+    }
+}
+
+.widget__title--active::before{
+    top: 0;
+    transform: rotate(180deg);
+}
+
+.widget__body--hidden {
+    display: none;
+}

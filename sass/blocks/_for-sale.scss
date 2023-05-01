@@ -1,0 +1,61 @@
+.for-sale {
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+
+    .for-sale__cards-wrapper {
+        width: 870px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+
+    @media(max-width: 1200px) {
+        .for-sale__cards-wrapper {
+            width: 570px;
+        }
+    }
+
+    @media(max-width: 600px) {
+        .for-sale__cards-wrapper {
+            width: 270px;
+        }
+    }
+
+    .for-sale__cards-filter {
+        flex-grow: 1;
+        width: 270px;
+        form {
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+        }
+    }
+
+    @media(max-width: 900px) {
+        .for-sale__cards-filter {
+            transform: translateX(-150%);
+            transition: transform 0.5s ease-in;
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            overflow-y: auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px 2px #000;
+        }
+
+        .for-sale__cards-filter--active {
+            transform: translateX(-0%);
+        }
+    }
+}
+
+
+
+
+

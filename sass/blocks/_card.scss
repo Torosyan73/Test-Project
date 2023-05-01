@@ -1,0 +1,123 @@
+.card-link {
+    transition: all 0.2s ease-in;
+
+    &:hover {
+        opacity: 0.7;
+        transform: translateY(-10px);
+    }
+}
+
+.card-link--hidden {
+    display: none;
+}
+
+.card {
+    position: relative;
+    max-width: 270px;
+    background-color: #fff;
+}
+
+.card__badges {
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    display: flex;
+    column-gap: 10px;
+
+    & .badge {
+        padding: 3px 10px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.14;
+        color: #000000;
+        border-radius: 4px;
+    }
+
+    & .badge--comfort {
+        background-color: #FFCF26;
+    }
+    
+    & .badge--credit {
+        background-color: #11BE75;
+        color: #fff;
+    }
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 15px 15px 20px;
+}
+
+.card__content-title {
+    font-weight: 700;
+    font-size: 18px;
+    color: #000000;
+}
+
+.card__content-term {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.142;
+    color: #000000;
+}
+
+.card__content-metro {
+    position: relative;
+    padding-left: 26px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.142;
+    color: #000000;
+
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        content: "";
+        width: 16px;
+        height: 11px;
+        background-image: url(./../img/card/metro.svg);
+        background-repeat: no-repeat;
+        background-size: initial;
+    }
+}
+
+.card__content-address {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.142;
+    color: #777777;
+}
+
+.card__button-show-more {
+    padding: 26px 0 30px;
+    width: 100%;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    text-align: center;
+    color: #4290C9;
+    background-color: #E5E5E5;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+
+    &::before {
+        content: "";
+        display: inline-block;
+        margin-right: 10px;
+        vertical-align: bottom;
+        width: 24px;
+        height: 24px;
+        background-image: url(./../img/icon/plus-circle.svg);
+        background-repeat: no-repeat;
+        background-size: initial;
+    }
+
+    &:hover {
+        background-color: #d6c9c9;
+    }
+}
